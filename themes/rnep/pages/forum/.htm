@@ -1,0 +1,22 @@
+title = "Forum"
+url = "/forum"
+layout = "default"
+description = "The Forum main page"
+is_hidden = 0
+
+[forumChannels]
+memberPage = "forum/member"
+channelPage = "forum/channel"
+topicPage = "forum/topic"
+==
+<div class="forum-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel">
+                    {% component 'forumChannels' %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

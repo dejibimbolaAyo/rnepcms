@@ -1,0 +1,29 @@
+title = "Resolution talk"
+url = "/resolution-talk/:slug"
+layout = "default"
+description = "Talk"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "talks/post"
+==
+<?php
+function onEnd()
+{
+	$this->page->title = $this['post']->title;
+}
+?>
+==
+<div class="blog-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<h3>{{ this.page.title }}</h3>
+				<div class="well">
+					{% component 'blogPost' %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

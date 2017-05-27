@@ -1,0 +1,29 @@
+title = "Research Post"
+url = "/research-post/:slug"
+layout = "default"
+description = "This loads post saved in either Ongoing Research or  in Concluded Researches"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "research/concluded"
+==
+<?php
+function onEnd()
+{
+	$this->page->title = $this['post']->title;
+}
+?>
+==
+<div class="blog-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<h3>{{ this.page.title }}</h3>
+				<div class="well">
+					{% component 'blogPost' %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

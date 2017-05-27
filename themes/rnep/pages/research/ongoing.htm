@@ -1,0 +1,26 @@
+title = "Ongoing Researches"
+url = "/researches/ongoing"
+layout = "default"
+description = "This page contains posts under ongoing category"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "ongoing-researches"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "research/ongoing"
+postPage = "research/post"
+==
+<div class="blog-page">
+		<div class="container">
+	        <div class="row">
+	            <div class="col-md-9">
+			       {% component 'blogPosts' %} 
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+		</div>
+	</div>

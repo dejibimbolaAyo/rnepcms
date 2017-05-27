@@ -1,0 +1,26 @@
+title = "Events"
+url = "/events"
+layout = "default"
+description = "Events around Nigerian Schools"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "events"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "event/all"
+postPage = "event/post"
+==
+<div class="blog-page">
+		<div class="container">
+	        <div class="row">
+	            <div class="col-md-9">
+			        {% component 'blogPosts' %}
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+		</div>
+	</div>

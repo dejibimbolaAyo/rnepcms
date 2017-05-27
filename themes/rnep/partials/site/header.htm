@@ -1,0 +1,41 @@
+==
+<!-- header -->
+<div class="header">
+	<div class="container">
+		<div class="header-nav">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<h1><a class="navbar-brand" href="index.html">
+						<img src="images/logo.png" class="logo">
+					</a></h1>
+				</div>
+				{{ "app.request.attributes.get('_route')"}}
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="hvr-bounce-to-bottom {{ (_SERVER['REQUEST_URI'] == 'home') ? 'active' : ''  }}"><a href="{{'home' |page}}">Home</a></li>
+						<li class="hvr-bounce-to-bottom"><a href="{{'talks/all' |page}}">Resolution Talk</a></li>
+						<li class="hvr-bounce-to-bottom"><a href="{{ 'event/all' |page}}">Events</a></li>
+						<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Researches <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li class="hvr-bounce-to-bottom"><a href="{{'research/ongoing' |page}}">Ongoing Researches</a></li>
+							<li class="hvr-bounce-to-bottom"><a href="{{'research/concluded' |page}}">Concluded Researches</a></li>
+						</ul>
+					</li>
+					<li class="hvr-bounce-to-bottom"><a href="{{'blog/all' |page}}">Blog</a></li>
+						<li class="hvr-bounce-to-bottom"><a href="{{'about' |page}}">About</a></li>
+					<li class="hvr-bounce-to-bottom"><a href="{{'contact' |page}}">Contact Us</a></li>
+				</ul>
+				</div><!-- //navbar-collapse -->
+			</nav>
+		</div>
+	</div>
+</div>
+<!-- //header -->
